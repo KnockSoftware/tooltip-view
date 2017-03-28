@@ -173,6 +173,7 @@ public class TooltipView extends TextView {
 
     public void setArrowPositioning(int arrowPositioning) {
         this.arrowPositioning = arrowPositioning;
+        arrowLocation = arrowPositioning == 0 ? new TopArrowLocation() : new BottomArrowLocation();
         invalidate();
     }
 
